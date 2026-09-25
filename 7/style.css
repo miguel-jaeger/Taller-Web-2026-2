@@ -1,0 +1,95 @@
+ /* Estilos generales para centrar la tarjeta en la pantalla */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* 1. LA TARJETA (EFECTO ELEVACIÓN) */
+    .tarjeta {
+      width: 280px;
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden; /* Redondea los bordes del contenido interno */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave inicial */
+      
+      /* Transición suave para moverse y cambiar la sombra */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    /* Al pasar el mouse por la tarjeta: sube y la sombra crece */
+    .tarjeta:hover {
+      transform: translateY(-10px); /* Sube 10 píxeles */
+      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2); /* Sombra más grande e intensa */
+    }
+
+    /* 2. CONTENEDOR DE LA IMAGEN (OVERFLOW: HIDDEN) */
+    .contenedor-imagen {
+      width: 100%;
+      height: 180px;
+      overflow: hidden; /* Corta lo que sobresalga al agrandarse */
+    }
+
+    .contenedor-imagen img {
+      width: 60%;
+      height: auto;
+      margin: 30px auto;
+      display: block;
+      object-fit: cover;
+      /* Transición suave para el zoom */
+      transition: transform 0.4s ease;
+      align-self: center;
+    }
+
+    /* Cuando pasamos el mouse por la tarjeta, la imagen interna se agranda */
+    .tarjeta:hover .contenedor-imagen img {
+      transform: scale(1.15); /* Crece un 15% sin salirse del contenedor */
+    }
+
+    /* Contenido de texto */
+    .contenido {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contenido h2 {
+      margin: 0 0 10px 0;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .contenido p {
+      margin: 0 0 20px 0;
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* 3. BOTÓN DE COMPRA CON FEEDBACK (:HOVER y :ACTIVE) */
+    .boton-compra {
+      background-color: #2563eb; /* Azul inicial */
+      color: white;
+      border: none;
+      padding: 10px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      
+      /* Transición suave al pasar el mouse o hacer clic */
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    /* Al pasar el mouse: cambia de color */
+    .boton-compra:hover {
+      background-color: #1d4ed8; /* Azul más oscuro */
+    }
+
+    /* Al hacer clic (active): se "hunde" haciéndose un poco más pequeño */
+    .boton-compra:active {
+      transform: scale(0.92); /* Se reduce al 92% */
+    }
