@@ -1,0 +1,16 @@
+@keyframes aparecerDesaparecer{
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.texto-animado {
+    font-size: 2em;
+    color: blue;
+    text-align: center;
+    margin-top: 30px;
+    animation-name: aparecerDesaparecer;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
