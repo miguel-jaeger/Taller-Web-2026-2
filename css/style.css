@@ -15,13 +15,14 @@
 }
 
 #btn-menu {
-    padding: 8px 12px;
+    padding: 12px 18px;
     cursor: pointer;
     color: white;
     background: var(--vino);
     border: 0;
     border-radius: 999px;
     font: inherit;
+    font-size: 1.1rem;
 }
 
 #menu {
@@ -43,7 +44,7 @@
 #menu a,
 #menu button {
     display: block;
-    padding: 8px 12px;
+    padding: 12px 16px;
     background-color: transparent;
     color: var(--tinta);
     text-decoration: none;
@@ -52,6 +53,7 @@
     text-align: left;
     cursor: pointer;
     border-radius: 999px;
+    font-size: 1.05rem;
 }
 
 #menu a:hover,
@@ -169,10 +171,16 @@ body:has(#modal-contacto[open]) #menu button[command="show-modal"] {
 }
 
 .contenedor-galeria {
-    /* columns distribuye en columnas las tarjetas de distintas alturas. */
-    columns: 2;
+    /* En móvil, una columna evita que las tarjetas queden demasiado estrechas. */
+    columns: 1;
     column-gap: 14px;
     padding: 4px;
+}
+
+@media (min-width: 768px) {
+    .contenedor-galeria {
+        columns: 2;
+    }
 }
 
 .contenedor-galeria figure {
@@ -392,6 +400,7 @@ header {
 }
 
 .marca h1 {
+    display: none;
     margin: 0;
     color: var(--vino);
     font-size: clamp(1rem, 2vw, 1.55rem);
@@ -400,6 +409,7 @@ header {
 
 #movil {
     margin-left: auto;
+    margin-right: clamp(8px, 2vw, 16px);
     text-align: right;
 }
 
@@ -412,8 +422,16 @@ header {
         justify-content: space-between;
     }
 
+    #movil {
+        margin-right: 0;
+    }
+
     .indicador {
         flex: 1;
+    }
+
+    .marca h1 {
+        display: block;
     }
 
     #btn-menu {
@@ -427,6 +445,12 @@ header {
         flex-wrap: nowrap;
         justify-content: flex-end;
         margin: 0;
+    }
+
+    #menu a,
+    #menu button {
+        padding: 8px 12px;
+        font-size: .95rem;
     }
 }
 
