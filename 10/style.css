@@ -1,0 +1,14 @@
+/* Estilo base por defecto (Celular/Mobile First) */
+.tarjeta-servicios {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Cambio hacia pantallas más grandes (Escritorio) */
+@media (min-width: 768px) {
+    .tarjeta-servicios {
+        width: 31%;
+        float: left;
+        margin-right: 2%;
+    }
+}
