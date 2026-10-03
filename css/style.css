@@ -84,7 +84,7 @@ body:has(#modal-contacto[open]) #menu button[command="show-modal"] {
     /* min() limita el ancho y dvh usa la altura visible real del dispositivo. */
     width: min(92vw, 480px);
     border: 0;
-    border-radius: 30px;
+    border-radius: 16px;
     padding: clamp(16px, 4vw, 28px);
     max-height: calc(100dvh - 24px);
     overflow: hidden;
@@ -112,7 +112,7 @@ body:has(#modal-contacto[open]) #menu button[command="show-modal"] {
     padding: 8px;
     font: inherit;
     border: 1px solid #ddcbbb;
-    border-radius: 10px;
+    border-radius: 8px;
     background: #fff;
 }
 
@@ -180,7 +180,7 @@ body:has(#modal-contacto[open]) #menu button[command="show-modal"] {
     break-inside: avoid;
     margin: 0 0 14px;
     overflow: hidden;
-    border-radius: 22px;
+    border-radius: 14px;
     background: var(--papel);
     box-shadow: 0 8px 24px rgb(66 39 25 / 14%);
 }
@@ -189,7 +189,7 @@ body:has(#modal-contacto[open]) #menu button[command="show-modal"] {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 22px 22px 0 0;
+    border-radius: 14px 14px 0 0;
     transition: transform 180ms ease;
     /* view() vincula la animación al recorrido de cada imagen en pantalla. */
     animation: mostrar linear both;
@@ -327,7 +327,7 @@ header {
     grid-area: header;
     background: rgb(255 253 248 / 94%);
     border: 1px solid rgb(111 37 30 / 10%);
-    border-radius: 30px;
+    border-radius: 18px;
     box-shadow: 0 10px 36px rgb(70 43 26 / 8%);
 }
 
@@ -340,7 +340,7 @@ aside {
     grid-area: aside;
     color: #fff8ef;
     background: linear-gradient(145deg, #76271f, #a63e28);
-    border-radius: 32px;
+    border-radius: 20px;
     box-shadow: 0 18px 38px rgb(87 35 23 / 16%);
 }
 
@@ -348,7 +348,7 @@ footer {
     grid-area: footer;
     color: #f9ebdb;
     background: #38241f;
-    border-radius: 26px;
+    border-radius: 16px;
 }
 
 section {
@@ -387,7 +387,7 @@ header {
     height: 52px;
     padding: 2px;
     object-fit: contain;
-    border-radius: 12px;
+    border-radius: 8px;
     background: #fff;
 }
 
@@ -464,7 +464,7 @@ section article {
     margin-bottom: clamp(14px, 2vw, 22px);
     padding: clamp(22px, 3.3vw, 42px);
     border: 1px solid rgb(111 37 30 / 9%);
-    border-radius: 30px;
+    border-radius: 18px;
     background: var(--papel);
     box-shadow: 0 14px 40px rgb(72 45 28 / 7%);
 }
@@ -497,7 +497,7 @@ section article h2,
     max-height: 420px;
     margin-top: 22px;
     object-fit: cover;
-    border-radius: 24px;
+    border-radius: 16px;
     box-shadow: 0 14px 34px rgb(72 45 28 / 16%);
 }
 
