@@ -1,0 +1,35 @@
+
+main{
+    background-color: aliceblue;
+    border:1px solid;
+    padding: 5px;
+    width: 960px;
+    min-height: 40vh;
+    float: left;
+}
+
+header{
+    background-color: aquamarine;
+    border:1px solid;
+    min-height: 10vh;
+    float: left;
+    width: 100%;
+}
+
+article{
+    width: 700px;
+    background-color: bisque;
+    min-height: 30vh;
+    border:1px solid;
+    margin: 5px 5px 5px 0;
+    float: left;
+}
+
+aside{
+    background-color: lightsalmon;
+    border: 1px solid;
+    min-height: 30vh;
+    width: 240px;
+    float: right;
+    margin: 5px 0 0 0;
+}
