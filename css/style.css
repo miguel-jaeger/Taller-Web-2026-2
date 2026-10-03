@@ -191,11 +191,11 @@ body:has(#modal-contacto[open]) #menu button[command="show-modal"] {
     height: auto;
     border-radius: 22px 22px 0 0;
     transition: transform 180ms ease;
-    /* view() anima cada imagen mientras entra y sale del área visible. */
+    /* view() vincula la animación al recorrido de cada imagen en pantalla. */
     animation: mostrar linear both;
     animation-timeline: view();
-    /* El recorrido de la animación se limita al paso por el área visible. */
-    animation-range: entry 10% exit 20%;
+    /* Completa el fundido durante la entrada, no cuando la imagen ya sale. */
+    animation-range: entry 0% entry 70%;
     animation-duration: auto;
 }
 
