@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño responsive en columnas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Diseño responsive en columnas</h1>
+        <p>En pantallas pequeñas, las columnas se muestran una debajo de la otra.</p>
+    </header>
+
+    <main>
+        <section class="column" aria-labelledby="titulo-columna-uno">
+            <h2 id="titulo-columna-uno">Primera columna</h2>
+            <p>Este contenido ocupa la mitad del ancho disponible en pantallas grandes y todo el ancho en pantallas pequeñas.</p>
+        </section>
+
+        <section class="column" aria-labelledby="titulo-columna-dos">
+            <h2 id="titulo-columna-dos">Segunda columna</h2>
+            <p>La hoja de estilos adapta la disposición cuando el ancho de la pantalla es de 600 píxeles o menos.</p>
+        </section>
+    </main>
+</body>
+</html>

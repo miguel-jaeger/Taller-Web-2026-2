@@ -1,0 +1,16 @@
+    .main-layout {
+        display: flex;
+        gap: 20px;
+    }
+    .content {
+        width: 75%;
+    }
+    .sidebar {
+        width: 25%;
+        background-color: #ccc;
+    }
+    @media (max-width: 600px) {
+        .sidebar {
+            display: none;
+        }
+    }

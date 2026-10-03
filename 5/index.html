@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño responsive con barra lateral</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Diseño responsive con barra lateral</h1>
+        <p>El panel lateral se oculta en pantallas pequeñas.</p>
+    </header>
+
+    <main class="main-layout">
+        <section class="content" aria-labelledby="titulo-contenido">
+            <h2 id="titulo-contenido">Contenido principal</h2>
+            <p>Esta área contiene la información principal de la página y se organiza junto a la barra lateral en pantallas grandes.</p>
+            <p>Al reducir el ancho de la ventana, el panel lateral desaparece para dejar más espacio disponible para la lectura.</p>
+        </section>
+
+        <aside class="sidebar" aria-labelledby="titulo-lateral">
+            <h2 id="titulo-lateral">Barra lateral</h2>
+            <p>Aquí pueden ubicarse enlaces relacionados, información complementaria o filtros.</p>
+            <ul>
+                <li>Contenido relacionado</li>
+                <li>Recursos</li>
+            </ul>
+        </aside>
+    </main>
+</body>
+</html>

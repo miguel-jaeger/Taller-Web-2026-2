@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido con filtros responsive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">Acerca de</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio" class="contenedor" aria-labelledby="titulo-principal">
+            <h1 id="titulo-principal">Contenido adaptable</h1>
+            <p>Esta página conserva el contenido principal y oculta el panel de filtros en pantallas pequeñas.</p>
+        </section>
+        <section id="acerca" aria-labelledby="titulo-acerca">
+            <h2 id="titulo-acerca">Acerca de este ejemplo</h2>
+            <p>El diseño usa una barra lateral para mostrar opciones de filtrado cuando hay espacio suficiente.</p>
+        </section>
+        <section id="contacto" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto">Contacto</h2>
+            <p>Consulta las opciones disponibles en el panel lateral.</p>
+        </section>
+        <aside class="facet_sidebar" aria-labelledby="titulo-filtros">
+            <h2 id="titulo-filtros">Filtros</h2>
+            <form>
+                <fieldset>
+                    <legend>Categorías</legend>
+                    <label><input type="checkbox" name="categoria" value="opcion-1"> Opción 1</label>
+                    <label><input type="checkbox" name="categoria" value="opcion-2"> Opción 2</label>
+                    <label><input type="checkbox" name="categoria" value="opcion-3"> Opción 3</label>
+                </fieldset>
+            </form>
+        </aside>
+    </main>
+</body>
+</html>
