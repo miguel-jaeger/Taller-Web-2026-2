@@ -1,0 +1,505 @@
+/* Polleria Romerito
+   1. Menu responsive sin JavaScript
+   2. 5 resoluciones con grid-area
+   3. Desplazamiento lento por anclas */
+
+:root {
+    --crema: #f7f0e5;
+    --papel: #fffdf8;
+    --tinta: #32251f;
+    --vino: #6f251e;
+    --tomate: #c74425;
+    --dorado: #e2a64a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#btn-menu {
+    padding: 8px 12px;
+    cursor: pointer;
+    color: white;
+    background: var(--vino);
+    border: 0;
+    border-radius: 999px;
+    font: inherit;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+}
+
+#menu[hidden] {
+    display: none;
+}
+
+#menu a,
+#menu button {
+    display: block;
+    padding: 8px 12px;
+    background-color: transparent;
+    color: var(--tinta);
+    text-decoration: none;
+    border: 0;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 999px;
+}
+
+#menu a:hover,
+#menu button:hover {
+    background-color: #f4e4cc;
+}
+
+body:has(#inicio:target) #menu a[href="#inicio"],
+body:has(#carta:target) #menu a[href="#carta"],
+body:has(#nosotros:target) #menu a[href="#nosotros"],
+body:has(#pedidos:target) #menu a[href="#pedidos"],
+body:not(:has(section article:target)) #menu a[href="#inicio"],
+body:has(#modal-contacto[open]) #menu button[command="show-modal"] {
+    color: #fff;
+    background: var(--tomate);
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgb(199 68 37 / 20%);
+}
+
+#menu a:focus-visible,
+#menu button:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 2px;
+}
+
+#modal-contacto {
+    width: min(92vw, 480px);
+    border: 0;
+    border-radius: 30px;
+    padding: clamp(16px, 4vw, 28px);
+    max-height: calc(100dvh - 24px);
+    overflow: hidden;
+    color: var(--tinta);
+    background: var(--papel);
+    box-shadow: 0 24px 80px rgb(47 26 16 / 28%);
+}
+
+#modal-contacto::backdrop {
+    background-color: rgb(50 37 31 / 62%);
+    backdrop-filter: blur(4px);
+}
+
+.formulario-contacto {
+    display: grid;
+    gap: 6px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    font: inherit;
+    border: 1px solid #ddcbbb;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.formulario-contacto textarea {
+    height: 4.5rem;
+    resize: none;
+}
+
+.formulario-contacto button {
+    border: 0;
+    border-radius: 999px;
+    padding: 10px 18px;
+    color: white;
+    background: var(--vino);
+    font: inherit;
+    cursor: pointer;
+}
+
+.formulario-contacto button[value="cancelar"] {
+    color: var(--tinta);
+    background: #eee4d7;
+}
+
+.acciones-contacto {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+@media (max-height: 560px) {
+    #modal-contacto {
+        padding: 12px 18px;
+    }
+
+    #modal-contacto h2 {
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+    }
+
+    .formulario-contacto {
+        gap: 4px;
+    }
+
+    .formulario-contacto input {
+        padding: 5px 8px;
+    }
+
+    .formulario-contacto textarea {
+        height: 3.5rem;
+    }
+}
+
+.contenedor-galeria {
+    columns: 2;
+    column-gap: 14px;
+    padding: 4px;
+}
+
+.contenedor-galeria figure {
+    break-inside: avoid;
+    margin: 0 0 14px;
+    overflow: hidden;
+    border-radius: 22px;
+    background: var(--papel);
+    box-shadow: 0 8px 24px rgb(66 39 25 / 14%);
+}
+
+.contenedor-galeria img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 22px 22px 0 0;
+    transition: transform 180ms ease;
+    animation: mostrar linear both;
+    animation-timeline: view();
+    animation-range: entry 10% exit 20%;
+    animation-duration: auto;
+}
+
+.contenedor-galeria figcaption {
+    display: grid;
+    gap: 5px;
+    padding: 12px 14px 15px;
+    color: var(--vino);
+}
+
+.contenedor-galeria figcaption strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.contenedor-galeria figcaption span {
+    display: block;
+    color: #75645a;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+@keyframes mostrar {
+    from {
+        opacity: 0;
+        translate: 0 100px;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+.indicador {
+    height: 4px;
+    width: 0%;
+    background-color: var(--tomate);
+    animation: barra linear;
+    animation-timeline: scroll(root);
+    animation-duration: auto;
+    position: absolute;
+    bottom: 7px;
+    left: 12px;
+    z-index: 150;
+    border-radius: 999px;
+}
+
+@keyframes barra {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: calc(100% - 24px);
+    }
+}
+
+/* ---------- 2. GRID AREA Y 5 RESOLUCIONES ----------
+   El HTML dentro de <main> es:
+       <header>  <section>  <aside>  <footer>
+
+   Mobile-first: primero se escribe la version mas simple (movil, una sola
+   columna) y despues cada @media va cambiando el reparto. Las areas se
+   nombran para poder reordenar las cajas sin tocar el HTML. */
+
+/* Movil: una columna */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "section"
+        "aside"
+        "footer";
+}
+
+/* Tablet: aside a la derecha */
+@media (min-width: 480px) {
+    main {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "header header"
+            "section aside"
+            "footer footer";
+    }
+}
+
+/* Portatil: aside a todo el ancho, debajo */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header header"
+            "section section"
+            "aside aside"
+            "footer footer";
+    }
+}
+
+/* Escritorio: aside a la derecha otra vez */
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+            "header header"
+            "section aside"
+            "footer footer";
+    }
+}
+
+/* Pantalla ancha: aside de ancho fijo */
+@media (min-width: 1440px) {
+    main {
+        grid-template-columns: 1fr 300px;
+        grid-template-areas:
+            "header header"
+            "section aside"
+            "footer footer";
+    }
+}
+
+/* Superficies y color */
+header {
+    grid-area: header;
+    background: rgb(255 253 248 / 94%);
+    border: 1px solid rgb(111 37 30 / 10%);
+    border-radius: 30px;
+    box-shadow: 0 10px 36px rgb(70 43 26 / 8%);
+}
+
+section {
+    grid-area: section;
+    min-width: 0;
+}
+
+aside {
+    grid-area: aside;
+    color: #fff8ef;
+    background: linear-gradient(145deg, #76271f, #a63e28);
+    border-radius: 32px;
+    box-shadow: 0 18px 38px rgb(87 35 23 / 16%);
+}
+
+footer {
+    grid-area: footer;
+    color: #f9ebdb;
+    background: #38241f;
+    border-radius: 26px;
+}
+
+section {
+    min-height: 100vh;
+}
+
+aside,
+footer {
+    padding: clamp(20px, 3vw, 34px);
+}
+
+/* El header se queda fijo arriba al desplazar */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 9px clamp(14px, 2vw, 24px);
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+.marca img {
+    width: 46px;
+    height: 52px;
+    padding: 2px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.marca h1 {
+    margin: 0;
+    color: var(--vino);
+    font-size: clamp(1rem, 2vw, 1.55rem);
+    line-height: 1.1;
+}
+
+#movil {
+    margin-left: auto;
+    text-align: right;
+}
+
+/* En web se oculta el boton y la lista queda siempre horizontal. */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .indicador {
+        flex: 1;
+    }
+
+    #btn-menu {
+        display: none;
+    }
+
+    #menu,
+    #menu[hidden] {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        margin: 0;
+    }
+}
+
+
+/* ---------- 3. DESPLAZAMIENTO LENTO POR ANCLAS ---------- */
+
+html {
+    /* Desplazamiento suave al usar el menu */
+    scroll-behavior: smooth;
+    /* Deja espacio para que el header fijo no tape el titulo */
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--tinta);
+    background:
+        radial-gradient(ellipse at 8% 5%, rgb(229 177 100 / 17%), transparent 34rem),
+        var(--crema);
+}
+
+main {
+    width: min(100%, 1440px);
+    margin: 0 auto;
+    gap: clamp(12px, 2vw, 22px);
+    padding: clamp(12px, 2.4vw, 32px);
+}
+
+section article {
+    margin-bottom: clamp(14px, 2vw, 22px);
+    padding: clamp(22px, 3.3vw, 42px);
+    border: 1px solid rgb(111 37 30 / 9%);
+    border-radius: 30px;
+    background: var(--papel);
+    box-shadow: 0 14px 40px rgb(72 45 28 / 7%);
+}
+
+section article h2,
+#modal-contacto h2 {
+    margin-top: 0;
+    color: var(--vino);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+#inicio {
+    min-height: 34vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(125deg, #fffdf8, #f3dfc2);
+}
+
+#inicio p {
+    max-width: 42rem;
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    line-height: 1.65;
+}
+
+.contenedor-galeria img:hover {
+    transform: translateY(-3px);
+}
+
+aside h2 {
+    margin-top: 0;
+    color: #ffdb9f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+aside p {
+    line-height: 1.7;
+}
+
+footer {
+    text-align: center;
+    letter-spacing: .04em;
+}
+
+/* Resalta la seccion a la que se saltó con el menu */
+article:target {
+    outline: 2px solid var(--dorado);
+    outline-offset: 3px;
+}
+
+/* Respeta a quien pidio menos movimiento en su sistema */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polleria Romerito</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main>
+        <header>
+            <div class="indicador"></div>
+            <a class="marca" href="#inicio">
+                <img src="img/logo.jpg" alt="Logo de Pollería Romerito">
+                <h1>Pollería Romerito</h1>
+            </a>
+            <nav id="movil" aria-label="Navegación principal">
+                <button type="button" name="menu" id="btn-menu" onclick="menu.hidden ^= 1">&#9776; Menú</button>
+                <ul id="menu" hidden>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#carta">Carta</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#pedidos">Pedidos</a></li>
+                    <li><button type="button" commandfor="modal-contacto" command="show-modal">Contacto</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <article id="inicio">
+                <h2>Inicio</h2>
+                <p>Somos un negocio familiar especializado en Pollos, Parrillas, Hamburguesas entre otras variadas ofertas que harán de su estancia en nuestro local una experiencia única.</p>
+            </article>
+
+            <article id="carta">
+                <h2>Carta</h2>
+                <div class="contenedor-galeria">
+                    <figure><img src="img/pollo-brasa.jpeg" alt="Pollo a la brasa"><figcaption><strong>Pollo a la brasa</strong><span>Marinado con hierbas y cocido lentamente al carbón.</span></figcaption></figure>
+                    <figure><img src="img/aji_de_gallina.jpg" alt="Ají de gallina"><figcaption><strong>Ají de gallina</strong><span>Pollo deshilachado en crema de ají amarillo y nueces.</span></figcaption></figure>
+                    <figure><img src="img/arroz_chaufa.jpg" alt="Arroz chaufa"><figcaption><strong>Arroz chaufa</strong><span>Arroz salteado al wok con huevo, cebollita y sillao.</span></figcaption></figure>
+                    <figure><img src="img/arroz_con_mariscos.jpg" alt="Arroz con mariscos"><figcaption><strong>Arroz con mariscos</strong><span>Arroz sazonado con mariscos frescos y especias.</span></figcaption></figure>
+                    <figure><img src="img/arroz_con_pato_peru.jpg" alt="Arroz con pato"><figcaption><strong>Arroz con pato</strong><span>Pato tierno acompañado de arroz verde al culantro.</span></figcaption></figure>
+                    <figure><img src="img/adobo.jpg" alt="Adobo"><figcaption><strong>Adobo</strong><span>Cerdo marinado en chicha de jora y ajíes, cocido lentamente.</span></figcaption></figure>
+                    <figure><img src="img/anticuchos.jpg" alt="Anticuchos"><figcaption><strong>Anticuchos</strong><span>Brochetas marinadas y doradas a la parrilla.</span></figcaption></figure>
+                    <figure><img src="img/carapulcra.jpg" alt="Carapulcra"><figcaption><strong>Carapulcra</strong><span>Guiso tradicional de papa seca, maní y ají panca.</span></figcaption></figure>
+                    <figure><img src="img/cau_cau.jpg" alt="Cau cau"><figcaption><strong>Cau cau</strong><span>Mondongo y papa guisados con hierbabuena.</span></figcaption></figure>
+                    <figure><img src="img/causa_rellena.jpg" alt="Causa rellena"><figcaption><strong>Causa rellena</strong><span>Papa amarilla al limón rellena de pollo y vegetales.</span></figcaption></figure>
+                    <figure><img src="img/ceviche.jpg" alt="Ceviche"><figcaption><strong>Ceviche</strong><span>Pescado fresco marinado en limón, ají y cebolla.</span></figcaption></figure>
+                    <figure><img src="img/chicharron.jpg" alt="Chicharrón"><figcaption><strong>Chicharrón</strong><span>Cerdo dorado y crujiente, servido con camote.</span></figcaption></figure>
+                    <figure><img src="img/cuy_peruano.jpg" alt="Cuy peruano"><figcaption><strong>Cuy peruano</strong><span>Cuy crocante acompañado de papas y salsa de ají.</span></figcaption></figure>
+                    <figure><img src="img/estofado_de_pollo_peru.jpg" alt="Estofado de pollo"><figcaption><strong>Estofado de pollo</strong><span>Pollo guisado con verduras en salsa casera.</span></figcaption></figure>
+                    <figure><img src="img/lomo_saltado.jpg" alt="Lomo saltado"><figcaption><strong>Lomo saltado</strong><span>Res salteada al wok con cebolla, tomate y sillao.</span></figcaption></figure>
+                    <figure><img src="img/olluquito.jpg" alt="Olluquito"><figcaption><strong>Olluquito</strong><span>Olluco guisado con ají y finas tiras de carne.</span></figcaption></figure>
+                    <figure><img src="img/papa_a_la_huancaina_peru.jpg" alt="Papa a la huancaína"><figcaption><strong>Papa a la huancaína</strong><span>Papas bañadas en salsa de queso y ají amarillo.</span></figcaption></figure>
+                    <figure><img src="img/rocoto_relleno.jpg" alt="Rocoto relleno"><figcaption><strong>Rocoto relleno</strong><span>Rocoto arequipeño relleno de carne y cubierto con queso.</span></figcaption></figure>
+                    <figure><img src="img/seco_de_res_peru.jpg" alt="Seco de res"><figcaption><strong>Seco de res</strong><span>Res cocida a fuego lento en salsa de culantro.</span></figcaption></figure>
+                    <figure><img src="img/solterito.jpg" alt="Solterito"><figcaption><strong>Solterito</strong><span>Ensalada arequipeña de habas, queso fresco y vegetales.</span></figcaption></figure>
+                </div>
+            </article>
+
+            <article id="nosotros">
+                <h2>Nosotros</h2>
+                <p>Receta de familia desde 1998. Maiz, achiote y tiempo.</p>
+            </article>
+
+            <article id="pedidos">
+                <h2>Pedidos</h2>
+                <p>Delivery propio en un radio de 5 km. Pedidos minimos de S/ 20.</p>
+            </article>
+
+        </section>
+
+        <aside>
+            <h2>Pedido rápido</h2>
+            <p>Llámanos para pedidos al instante.</p>
+            <p>999 888 777</p>
+            <p>Lun a Dom, 11am - 10pm</p>
+        </aside>
+
+        <footer>Pollería Romerito · Pollo a la brasa, servido en familia</footer>
+    </main>
+
+    <dialog id="modal-contacto" aria-labelledby="titulo-contacto">
+        <h2 id="titulo-contacto">Contacto</h2>
+        <form method="dialog" class="formulario-contacto">
+            <label for="nombre-contacto">Nombre</label>
+            <input type="text" id="nombre-contacto" name="nombre" autocomplete="name" required>
+
+            <label for="titulo-contacto-mensaje">Título</label>
+            <input type="text" id="titulo-contacto-mensaje" name="titulo" required>
+
+            <label for="cuerpo-contacto">Cuerpo</label>
+            <textarea id="cuerpo-contacto" name="cuerpo" rows="3" required></textarea>
+
+            <div class="acciones-contacto">
+                <button type="submit" value="enviar">Enviar</button>
+                <button type="submit" value="cancelar" formnovalidate>Cancelar</button>
+            </div>
+        </form>
+    </dialog>
+
+</body>
+</html>
