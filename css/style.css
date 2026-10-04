@@ -28,11 +28,19 @@
 #menu {
     /* Flex en columna es la disposición móvil; @media la cambia a una fila. */
     display: flex;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 12px;
+    right: 12px;
     flex-direction: column;
     gap: 6px;
     list-style: none;
-    margin: 8px 0 0;
-    padding: 0;
+    margin: 0;
+    padding: 8px;
+    border: 1px solid rgb(111 37 30 / 10%);
+    border-radius: 16px;
+    background: var(--papel);
+    box-shadow: 0 14px 32px rgb(50 37 31 / 15%);
 }
 
 /* El botón alterna el atributo hidden en el HTML; esta regla mantiene cerrado
@@ -391,8 +399,8 @@ header {
 }
 
 .marca img {
-    width: 46px;
-    height: 52px;
+    width: 62px;
+    height: 70px;
     padding: 2px;
     object-fit: contain;
     border-radius: 8px;
@@ -430,6 +438,11 @@ header {
         flex: 1;
     }
 
+    .marca img {
+        width: 46px;
+        height: 52px;
+    }
+
     .marca h1 {
         display: block;
     }
@@ -440,11 +453,17 @@ header {
 
     #menu,
     #menu[hidden] {
+        position: static;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: flex-end;
         margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
     }
 
     #menu a,
