@@ -1,0 +1,11 @@
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tarjeta {
+    width: 200px;
+    height: 150px;
+    background-color: lightblue;
+}

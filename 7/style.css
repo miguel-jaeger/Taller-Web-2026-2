@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* Tres columnas con fracciones */
+    grid-template-rows: 100px auto;
+    /* Dos filas: una fija y una automática */
+    gap: 20px;
+    /* Espacio entre filas y columnas */
+    background-color: #ddd;
+    padding: 10px;
+}
+
+.item {
+    background-color: steelblue;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+}

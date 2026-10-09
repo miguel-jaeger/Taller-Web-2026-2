@@ -1,0 +1,9 @@
+.contenedor {
+    display: flex;
+    gap: 10px;
+}
+
+.item {
+    padding: 10px;
+    background-color: #e65353;
+}

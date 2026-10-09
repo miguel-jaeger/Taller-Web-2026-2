@@ -1,0 +1,21 @@
+.contenedor {
+    display: flex;
+}
+
+.item {
+    padding: 20px;
+    background-color: lightblue;
+    margin: 5px;
+}
+
+.uno {
+    order: 2;
+}
+
+.dos {
+    order: 1;
+}
+
+.tres {
+    order: 3;
+}
