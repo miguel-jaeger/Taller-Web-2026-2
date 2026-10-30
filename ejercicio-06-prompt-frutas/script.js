@@ -7,4 +7,4 @@ for (let i = 0; i < 3; i++) {
 }
 
 document.write("<h1>Las frutas ingresadas fueron:</h1>");
-document.write("<p>" + listaFrutas.join(", ") + "</p>");
+document.write("<p>" + listaFrutas.join("- ") + "</p>");
