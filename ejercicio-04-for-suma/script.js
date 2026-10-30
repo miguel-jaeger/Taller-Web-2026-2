@@ -1,9 +1,17 @@
 // Ejercicio 4: Acumulación iterativa con un bucle for
-let sumaTotal = 0;
+// El límite se ingresa desde el formulario y el resultado se muestra en consola.
+var formulario = document.querySelector("#form-suma");
 
-for (let i = 1; i <= 5; i++) {
-    sumaTotal = sumaTotal + i;
-    document.write("<p>Vuelta " + i + ": la suma actual es " + sumaTotal + "</p>");
-}
+formulario.addEventListener("submit", function (evento) {
+    evento.preventDefault();
 
-document.write("<h2>El resultado final de la suma es: " + sumaTotal + "</h2>");
+    var limite = Number(document.querySelector("#limite").value);
+    var sumaTotal = 0;
+
+    for (var i = 1; i <= limite; i++) {
+        sumaTotal = sumaTotal + i;
+        console.log("Vuelta " + i + ": la suma actual es " + sumaTotal);
+    }
+
+    console.log("El resultado final de la suma es: " + sumaTotal);
+});

@@ -1,8 +1,15 @@
 // Ejercicio 1: Evaluación condicional básica (if / else)
-var edad = 18;
+// El dato se ingresa desde el formulario y el resultado se muestra en consola.
+var formulario = document.querySelector("#form-edad");
 
-if (edad >= 18) {
-    console.log("Eres mayor de edad");
-} else {
-    console.log("Eres menor de edad");
-}
+formulario.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+
+    var edad = Number(document.querySelector("#edad").value);
+
+    if (edad >= 18) {
+        console.log("Eres mayor de edad");
+    } else {
+        console.log("Eres menor de edad");
+    }
+});

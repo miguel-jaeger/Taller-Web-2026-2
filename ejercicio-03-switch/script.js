@@ -1,26 +1,36 @@
 // Ejercicio 3: Selección múltiple con switch y break
-var dia = 3;
+// El dato se ingresa desde el formulario y el resultado se muestra en consola.
+var formulario = document.querySelector("#form-dia");
 
-switch (dia) {
-    case 1:
-        console.log("Lunes");
-        break;
-    case 2:
-        console.log("Martes");
-        break;
-    case 3:
-        console.log("Miércoles");
-        break;
-    case 4:
-        console.log("Jueves");
-        break;
-    case 5:
-        console.log("Viernes");
-        break;
-    case 6:
-    case 7:
-        console.log("Fin de semana");
-        break;
-    default:
-        console.log("Día de semana no válido");
-}
+formulario.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+
+    var dia = Number(document.querySelector("#dia").value);
+    var mensaje = "";
+
+    switch (dia) {
+        case 1:
+            mensaje = "Lunes";
+            break;
+        case 2:
+            mensaje = "Martes";
+            break;
+        case 3:
+            mensaje = "Miércoles";
+            break;
+        case 4:
+            mensaje = "Jueves";
+            break;
+        case 5:
+            mensaje = "Viernes";
+            break;
+        case 6:
+        case 7:
+            mensaje = "Fin de semana";
+            break;
+        default:
+            mensaje = "Día de semana no válido";
+    }
+
+    console.log(mensaje);
+});

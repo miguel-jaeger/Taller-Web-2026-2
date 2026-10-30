@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="../assets/estilos.css">
 </head>
 <body>
+    <header>
+        <h1>Ejercicio 4: Acumulación iterativa con un bucle <code>for</code></h1>
+        <p class="consigna">
+            Ingresa hasta qué número sumar. El bucle suma del 1 al límite indicado y muestra
+            en consola la suma acumulada en cada vuelta y el resultado final.
+        </p>
+    </header>
+
+    <form id="form-suma">
+        <div class="campo">
+            <label for="limite">Sumar del 1 hasta</label>
+            <input type="number" id="limite" name="limite" value="5" min="1" max="100" required>
+        </div>
+        <button type="submit">Calcular suma</button>
+    </form>
+
+    <p class="nota">
+        Abre la consola del navegador (<code>F12</code> → pestaña «Consola») para ver el resultado.
+    </p>
+
     <script src="script.js"></script>
 </body>
 </html>

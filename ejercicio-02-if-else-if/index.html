@@ -10,11 +10,19 @@
     <header>
         <h1>Ejercicio 2: Evaluación múltiple con <code>if / else if / else</code></h1>
         <p class="consigna">
-            Evalúa la variable <code>puntuacion</code>: muestra «Aprobaste con nota sobresaliente»
+            Ingresa una puntuación y muestra en consola «Aprobaste con nota sobresaliente»
             si es mayor o igual a 18, «Aprobaste» si es mayor o igual a 12 o «Desaprobaste»
             para cualquier valor menor.
         </p>
     </header>
+
+    <form id="form-puntuacion">
+        <div class="campo">
+            <label for="puntuacion">Puntuación</label>
+            <input type="number" id="puntuacion" name="puntuacion" value="13" min="0" max="20" required>
+        </div>
+        <button type="submit">Evaluar puntuación</button>
+    </form>
 
     <p class="nota">
         Abre la consola del navegador (<code>F12</code> → pestaña «Consola») para ver el resultado.

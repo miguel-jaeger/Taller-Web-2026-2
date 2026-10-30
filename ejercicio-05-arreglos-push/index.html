@@ -10,11 +10,19 @@
     <header>
         <h1>Ejercicio 5: Manipulación dinámica de arreglos</h1>
         <p class="consigna">
-            Crea el arreglo <code>frutas</code> con «manzana», «banana» y «naranja».
-            Agrega «uva» con <code>.push()</code> e imprime la cantidad total de elementos
-            con <code>.length</code>.
+            El arreglo <code>frutas</code> comienza con «manzana», «banana» y «naranja».
+            Ingresa una fruta para agregarla con <code>.push()</code> e imprime en consola
+            la cantidad total de elementos con <code>.length</code>.
         </p>
     </header>
+
+    <form id="form-fruta">
+        <div class="campo">
+            <label for="fruta">Nueva fruta</label>
+            <input type="text" id="fruta" name="fruta" placeholder="uva" required>
+        </div>
+        <button type="submit">Agregar fruta</button>
+    </form>
 
     <p class="nota">
         Abre la consola del navegador (<code>F12</code> → pestaña «Consola») para ver el resultado.
