@@ -1,7 +1,7 @@
 // Ejercicio 6: Captura de datos con window.prompt()
 const listaFrutas = [];
-
-for (let i = 0; i < 3; i++) {
+let final=prompt("Diga cuantas frutas tendrá la lista");
+for (let i = 0; i < final; i++) {
     let fruta = prompt("Ingresa la fruta número " + (i + 1) + ":");
     listaFrutas.push(fruta);
 }

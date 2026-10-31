@@ -2,8 +2,8 @@
 // El dato se ingresa desde el formulario y el resultado se muestra en consola.
 var formulario = document.querySelector("#form-puntuacion");
 
-formulario.addEventListener("submit", function (evento) {
-    evento.preventDefault();
+formulario.addEventListener("submit", function (e) {
+    e.preventDefault();
 
     var puntuacion = Number(document.querySelector("#puntuacion").value);
 

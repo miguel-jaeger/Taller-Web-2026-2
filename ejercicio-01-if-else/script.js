@@ -6,7 +6,9 @@ formulario.addEventListener("submit", function (evento) {
     evento.preventDefault();
 
     var edad = Number(document.querySelector("#edad").value);
+     var edad1 = Number(document.querySelector("#edad1").value);
 
+     alert(edad+edad1);
     if (edad >= 18) {
         console.log("Eres mayor de edad");
     } else {

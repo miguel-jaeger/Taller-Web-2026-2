@@ -8,10 +8,16 @@ formulario.addEventListener("submit", function (evento) {
     var limite = Number(document.querySelector("#limite").value);
     var sumaTotal = 0;
 
-    for (var i = 1; i <= limite; i++) {
+    /*for (var i = 1; i <= limite; i++) {
         sumaTotal = sumaTotal + i;
         console.log("Vuelta " + i + ": la suma actual es " + sumaTotal);
-    }
+    }*/
+        var i=1;
+        while (i<=limite) {
+            sumaTotal = sumaTotal + i;
+        console.log("Vuelta " + i + ": la suma actual es " + sumaTotal);
+        i++; 
+        }
 
     console.log("El resultado final de la suma es: " + sumaTotal);
 });
