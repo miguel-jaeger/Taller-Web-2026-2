@@ -43,7 +43,7 @@ Luego visita `http://localhost:8000`.
   3. Galería con filtros.
   4. Ventana modal accesible.
   5. Validación de formulario y notificaciones.
-- [x] Organización en carpetas `css/`, `js/`, `img/` y `docs/`.
+- [x] Organización en carpetas `css/`, `js/` e `img/`.
 
 ## Personalización sugerida
 
