@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Estudio Verde</title>
+    <meta name="description" content="Proyecto final del Taller de Programación Web: sitio responsivo con HTML, CSS y JavaScript.">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-pagina="index">
+    <header class="cabecera">
+        <div class="contenedor barra">
+            <a class="marca" href="index.html">
+                <img src="img/logo.svg" alt="" width="36" height="36">
+                Estudio Verde
+            </a>
+            <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">&#9776;</button>
+            <nav aria-label="Menú principal">
+                <ul class="menu" id="menu">
+                    <li><a href="index.html" data-pagina="index">Inicio</a></li>
+                    <li><a href="servicios.html" data-pagina="servicios">Servicios</a></li>
+                    <li><a href="contacto.html" data-pagina="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="tema-btn" id="temaBtn" type="button">Modo oscuro</button>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="hero">
+            <div>
+                <p class="etiqueta">Taller de Programación Web</p>
+                <h1>Un proyecto final que integra estructura, diseño e interactividad</h1>
+                <p>Plantilla base para construir un sitio completo con HTML semántico, CSS responsivo y JavaScript funcional.</p>
+                <a class="boton" href="servicios.html">Ver servicios</a>
+                <button class="boton secundario" type="button" data-abrir-modal="modalProyecto">Sobre el proyecto</button>
+            </div>
+            <img class="hero-img" src="https://picsum.photos/900/600?random=501" alt="Imagen de presentación del proyecto">
+        </section>
+
+        <section class="seccion" id="galeria">
+            <h2>Galería del proyecto</h2>
+            <div class="filtros" role="group" aria-label="Filtrar galería">
+                <button class="filtro activo" type="button" data-filtro="todos">Todos</button>
+                <button class="filtro" type="button" data-filtro="natural">Natural</button>
+                <button class="filtro" type="button" data-filtro="urbano">Urbano</button>
+                <button class="filtro" type="button" data-filtro="retrato">Retrato</button>
+            </div>
+            <div class="galeria">
+                <figure data-categoria="natural"><img loading="lazy" src="https://picsum.photos/500/380?random=511" alt="Bosque"><figcaption>Bosque</figcaption></figure>
+                <figure data-categoria="urbano"><img loading="lazy" src="https://picsum.photos/500/380?random=512" alt="Ciudad"><figcaption>Ciudad</figcaption></figure>
+                <figure data-categoria="retrato"><img loading="lazy" src="https://picsum.photos/500/380?random=513" alt="Retrato"><figcaption>Retrato</figcaption></figure>
+                <figure data-categoria="natural"><img loading="lazy" src="https://picsum.photos/500/380?random=514" alt="Lago"><figcaption>Lago</figcaption></figure>
+                <figure data-categoria="urbano"><img loading="lazy" src="https://picsum.photos/500/380?random=515" alt="Avenida"><figcaption>Avenida</figcaption></figure>
+                <figure data-categoria="retrato"><img loading="lazy" src="https://picsum.photos/500/380?random=516" alt="Persona"><figcaption>Persona</figcaption></figure>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <h2>Funcionalidades incluidas</h2>
+            <div class="grid-3">
+                <article class="tarjeta"><h3>Diseño responsivo</h3><p>Menú móvil, grillas flexibles y tipografía adaptable.</p></article>
+                <article class="tarjeta"><h3>Tema oscuro</h3><p>Preferencia persistente en el navegador con <code>localStorage</code>.</p></article>
+                <article class="tarjeta"><h3>Interactividad</h3><p>Filtros de galería, modal accesible y validación de formulario.</p></article>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <h2>Multimedia</h2>
+            <video controls width="100%" style="max-width: 640px; border-radius: 12px;">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Tu navegador no admite la etiqueta de video.
+            </video>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <p>&copy; <span data-anio>2026</span> Estudio Verde. Proyecto final del Taller de Programación Web.</p>
+            <p><a href="contacto.html">Escríbenos</a> · <a href="servicios.html">Servicios</a></p>
+        </div>
+    </footer>
+    <div class="modal" id="modalProyecto" role="dialog" aria-modal="true" aria-labelledby="tituloModalProyecto">
+        <div class="modal-caja">
+            <button class="cerrar" type="button" aria-label="Cerrar">&times;</button>
+            <h2 id="tituloModalProyecto">Sobre este proyecto</h2>
+            <p>Este sitio es una plantilla funcional para el proyecto final. Incluye navegación responsiva, modo oscuro, galería con filtros, formulario validado y ventanas modales.</p>
+            <p>Personalízalo con el tema de tu grupo, tus propias imágenes y al menos tres funcionalidades dinámicas.</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

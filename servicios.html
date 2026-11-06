@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Estudio Verde</title>
+    <meta name="description" content="Proyecto final del Taller de Programación Web: sitio responsivo con HTML, CSS y JavaScript.">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-pagina="servicios">
+    <header class="cabecera">
+        <div class="contenedor barra">
+            <a class="marca" href="index.html">
+                <img src="img/logo.svg" alt="" width="36" height="36">
+                Estudio Verde
+            </a>
+            <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">&#9776;</button>
+            <nav aria-label="Menú principal">
+                <ul class="menu" id="menu">
+                    <li><a href="index.html" data-pagina="index">Inicio</a></li>
+                    <li><a href="servicios.html" data-pagina="servicios">Servicios</a></li>
+                    <li><a href="contacto.html" data-pagina="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="tema-btn" id="temaBtn" type="button">Modo oscuro</button>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="seccion" style="border-top: 0;">
+            <p class="etiqueta">Servicios</p>
+            <h1>Soluciones para tu presencia digital</h1>
+            <p>Esta sección de ejemplo cumple el requisito de tres páginas o secciones y muestra cómo organizar contenido comercial.</p>
+            <div class="grid-3">
+                <article class="tarjeta"><h3>Sitio web</h3><p>Diseño responsivo, estructura semántica y navegación clara.</p></article>
+                <article class="tarjeta"><h3>Tienda online</h3><p>Catálogo, filtros de productos y formulario de contacto.</p></article>
+                <article class="tarjeta"><h3>Mantenimiento</h3><p>Mejoras de accesibilidad, rendimiento y contenido.</p></article>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <h2>Comparación de planes</h2>
+            <table>
+                <thead>
+                    <tr><th>Plan</th><th>Páginas</th><th>Soporte</th><th>Precio</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Básico</td><td>3</td><td>Correo</td><td>S/ 800</td></tr>
+                    <tr><td>Profesional</td><td>6</td><td>Correo y llamadas</td><td>S/ 1 500</td></tr>
+                    <tr><td>Empresa</td><td>Ilimitadas</td><td>Prioritario</td><td>S/ 2 800</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="seccion">
+            <h2>¿Listo para empezar?</h2>
+            <p><a class="boton" href="contacto.html">Solicitar información</a></p>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <p>&copy; <span data-anio>2026</span> Estudio Verde. Proyecto final del Taller de Programación Web.</p>
+            <p><a href="contacto.html">Escríbenos</a> · <a href="servicios.html">Servicios</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
