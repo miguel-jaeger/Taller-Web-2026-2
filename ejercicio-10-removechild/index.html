@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 · Eliminar un hijo con removeChild</title>
+    <link rel="stylesheet" href="../assets/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Ejercicio 10: Eliminar un elemento hijo específico</h1>
+        <p class="consigna">
+            Elimina la segunda imagen de la galería utilizando el método <code>.removeChild()</code> aplicado sobre el elemento padre (<code>#galeria</code>).
+        </p>
+    </header>
+
+    <div class="panel">
+        <div id="galeria">
+            <img id="img1" src="https://picsum.photos/100?1" alt="Foto 1">
+            <img id="img2" src="https://picsum.photos/100?2" alt="Foto 2">
+            <img id="img3" src="https://picsum.photos/100?3" alt="Foto 3">
+        </div>
+        <button id="btnEliminarSegunda" type="button">Eliminar Segunda Imagen</button>
+    </div>
+
+    <p class="nota">
+        Las imágenes se cargan desde un servicio público de prueba. Después de eliminar la segunda, el botón se deshabilita.
+    </p>
+
+    <script src="script.js"></script>
+</body>
+</html>
