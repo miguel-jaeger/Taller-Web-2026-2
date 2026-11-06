@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9: Control de apertura y cierre del modal con JS</title>
+    <link rel="stylesheet" href="../assets/estilos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Ejercicio 9: Control de apertura y cierre del modal con JS</h1>
+        <p class="consigna">El botón principal muestra el modal cambiando <code>display</code> a <code>block</code>; la «X» lo oculta cambiándolo a <code>none</code>.</p>
+    </header>
+    <main>
+        <section class="demo">
+            <button id="openModal">Abrir Ventana Flotante</button>
+            <div class="modal" id="myModal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Formulario de Contacto</h2>
+                    <form>
+                        <label>Nombre:</label>
+                        <input type="text" required>
+                        <label>Email:</label>
+                        <input type="email" required>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

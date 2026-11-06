@@ -1,0 +1,15 @@
+.cuadro {
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    margin: 20px auto;
+    transition: background-color 0.3s ease;
+}
+
+#cambiarColor {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

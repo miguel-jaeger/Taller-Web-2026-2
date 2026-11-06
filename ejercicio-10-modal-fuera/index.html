@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10: Cierre inteligente al hacer clic fuera del modal</title>
+    <link rel="stylesheet" href="../assets/estilos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Ejercicio 10: Cierre inteligente al hacer clic fuera del modal</h1>
+        <p class="consigna">El evento global <code>window.onclick</code> evalúa si el elemento clicado es el fondo <code>.modal</code> y oculta la ventana flotante.</p>
+    </header>
+    <main>
+        <section class="demo">
+            <button id="openModal">Abrir Ventana Flotante</button>
+            <div class="modal" id="myModal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Formulario de Contacto</h2>
+                    <form>
+                        <label>Nombre:</label>
+                        <input type="text" required>
+                        <label>Email:</label>
+                        <input type="email" required>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
