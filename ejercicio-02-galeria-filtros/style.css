@@ -1,0 +1,51 @@
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filtro {
+    padding: 0.45rem 0.9rem;
+    border: 1px solid #bcccdc;
+    border-radius: 999px;
+    background: #fff;
+    color: #1f2933;
+    cursor: pointer;
+}
+
+.filtro.activo {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #fff;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.galeria figure {
+    margin: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #d9e2ec;
+    background: #f7f9fb;
+}
+
+.galeria img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria figcaption {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+.oculto {
+    display: none;
+}

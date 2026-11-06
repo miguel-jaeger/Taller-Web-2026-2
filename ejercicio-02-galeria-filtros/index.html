@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2: Galería con filtros</title>
+    <link rel="stylesheet" href="../assets/estilos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Ejercicio 2: Galería con filtros</h1>
+        <p class="consigna">Una galería de imágenes organizada por categorías. Los botones filtran los elementos combinando HTML, CSS y JavaScript.</p>
+    </header>
+    <main>
+        <section class="demo">
+            <div class="filtros" role="group" aria-label="Filtrar galería">
+                <button class="filtro activo" data-filtro="todos" type="button">Todos</button>
+                <button class="filtro" data-filtro="naturaleza" type="button">Naturaleza</button>
+                <button class="filtro" data-filtro="ciudad" type="button">Ciudad</button>
+                <button class="filtro" data-filtro="animales" type="button">Animales</button>
+            </div>
+            <div class="galeria">
+                <figure data-categoria="naturaleza"><img src="https://picsum.photos/400/300?random=201" alt="Bosque"><figcaption>Bosque</figcaption></figure>
+                <figure data-categoria="ciudad"><img src="https://picsum.photos/400/300?random=202" alt="Ciudad"><figcaption>Ciudad</figcaption></figure>
+                <figure data-categoria="animales"><img src="https://picsum.photos/400/300?random=203" alt="Animal"><figcaption>Animal</figcaption></figure>
+                <figure data-categoria="naturaleza"><img src="https://picsum.photos/400/300?random=204" alt="Montaña"><figcaption>Montaña</figcaption></figure>
+                <figure data-categoria="ciudad"><img src="https://picsum.photos/400/300?random=205" alt="Calles"><figcaption>Calles</figcaption></figure>
+                <figure data-categoria="animales"><img src="https://picsum.photos/400/300?random=206" alt="Mascota"><figcaption>Mascota</figcaption></figure>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

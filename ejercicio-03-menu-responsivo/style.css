@@ -1,0 +1,59 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #1f2937;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.marca {
+    color: #fff;
+    font-weight: 700;
+}
+
+.menu-btn {
+    background: transparent;
+    border: 1px solid #9aa5b1;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.35rem 0.6rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.enlaces {
+    display: none;
+    list-style: none;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    width: 100%;
+}
+
+.enlaces.abierto {
+    display: flex;
+    flex-direction: column;
+}
+
+.enlaces a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6rem 0.25rem;
+}
+
+@media (min-width: 768px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .enlaces {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        margin: 0;
+        gap: 0.5rem;
+    }
+}

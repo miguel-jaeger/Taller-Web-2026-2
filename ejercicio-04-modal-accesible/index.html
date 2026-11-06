@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4: Modal accesible</title>
+    <link rel="stylesheet" href="../assets/estilos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Ejercicio 4: Modal accesible</h1>
+        <p class="consigna">Un modal con <code>role="dialog"</code> y <code>aria-modal="true"</code> que se abre con un botón, se cierra con la «X», con <code>Escape</code> o al hacer clic fuera.</p>
+    </header>
+    <main>
+        <section class="demo">
+            <button id="abrirModal" type="button">Abrir ventana</button>
+            <div class="modal" id="miModal" role="dialog" aria-modal="true" aria-labelledby="tituloModal">
+                <div class="modal-caja">
+                    <button class="cerrar" type="button" aria-label="Cerrar">&times;</button>
+                    <h2 id="tituloModal">Ventana flotante</h2>
+                    <p>Este contenido se muestra sobre la página sin recargarla.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

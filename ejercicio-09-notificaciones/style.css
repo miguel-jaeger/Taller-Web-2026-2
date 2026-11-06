@@ -1,0 +1,67 @@
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.botones button {
+    padding: 0.55rem 0.9rem;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+}
+
+[data-tipo="exito"] {
+    background: #047857;
+}
+
+[data-tipo="error"] {
+    background: #b91c1c;
+}
+
+[data-tipo="info"] {
+    background: #2563eb;
+}
+
+#toasts {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: grid;
+    gap: 0.5rem;
+    z-index: 20;
+}
+
+.toast {
+    min-width: 16rem;
+    max-width: 22rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    animation: aparecer 0.25s ease;
+}
+
+.toast.exito {
+    background: #047857;
+}
+
+.toast.error {
+    background: #b91c1c;
+}
+
+.toast.info {
+    background: #2563eb;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

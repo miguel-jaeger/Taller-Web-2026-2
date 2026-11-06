@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10: Mini sitio integrador</title>
+    <link rel="stylesheet" href="../assets/estilos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Ejercicio 10: Mini sitio integrador</h1>
+        <p class="consigna">Integra menú responsivo, modo oscuro, galería con filtros, modal y validación de formulario en una sola página.</p>
+    </header>
+    <main>
+        <div class="sitio" id="inicio">
+            <header class="barra">
+                <span class="marca">Estudio Verde</span>
+                <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menuIntegrador">&#9776;</button>
+                <nav aria-label="Menú principal">
+                    <ul id="menuIntegrador">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="acciones-barra">
+                    <button id="tema" type="button">Modo oscuro</button>
+                </div>
+            </header>
+            <section class="hero">
+                <h1>Un sitio que integra HTML, CSS y JavaScript</h1>
+                <p>Menú responsivo, tema oscuro, filtros de galería, ventana modal y validación de formulario en un mismo proyecto.</p>
+                <button id="abrirModal" type="button">Conocer más</button>
+            </section>
+            <section class="seccion" id="galeria">
+                <h2>Galería</h2>
+                <div class="filtros" role="group" aria-label="Filtrar galería">
+                    <button class="filtro activo" data-filtro="todos" type="button">Todos</button>
+                    <button class="filtro" data-filtro="natural" type="button">Natural</button>
+                    <button class="filtro" data-filtro="urbano" type="button">Urbano</button>
+                </div>
+                <div class="galeria">
+                    <figure data-categoria="natural"><img src="https://picsum.photos/400/300?random=401" alt="Bosque"></figure>
+                    <figure data-categoria="urbano"><img src="https://picsum.photos/400/300?random=402" alt="Ciudad"></figure>
+                    <figure data-categoria="natural"><img src="https://picsum.photos/400/300?random=403" alt="Lago"></figure>
+                    <figure data-categoria="urbano"><img src="https://picsum.photos/400/300?random=404" alt="Edificios"></figure>
+                </div>
+            </section>
+            <section class="seccion" id="contacto">
+                <h2>Contacto</h2>
+                <form id="formContacto" novalidate>
+                    <label for="nombreContacto">Nombre</label>
+                    <input type="text" id="nombreContacto" name="nombre" required>
+                    <label for="correoContacto">Correo</label>
+                    <input type="email" id="correoContacto" name="correo" required>
+                    <label for="mensajeContacto">Mensaje</label>
+                    <textarea id="mensajeContacto" name="mensaje" rows="4" required></textarea>
+                    <button type="submit">Enviar mensaje</button>
+                    <p id="estadoFormulario" role="status"></p>
+                </form>
+            </section>
+        </div>
+        <div class="modal" id="modalIntegrador" role="dialog" aria-modal="true" aria-labelledby="tituloIntegrador">
+            <div class="modal-caja">
+                <button class="cerrar" type="button" aria-label="Cerrar">&times;</button>
+                <h2 id="tituloIntegrador">Proyecto integrador</h2>
+                <p>Este ejemplo reúne estructura semántica, estilos responsivos y comportamiento dinámico.</p>
+            </div>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

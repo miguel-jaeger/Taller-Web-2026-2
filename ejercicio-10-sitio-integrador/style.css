@@ -1,0 +1,232 @@
+body {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sitio {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 0 1.25rem 3rem;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.marca {
+    font-weight: 800;
+    font-size: 1.15rem;
+}
+
+.barra nav ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.barra nav ul.abierto {
+    display: flex;
+    flex-direction: column;
+}
+
+.barra nav a {
+    display: block;
+    padding: 0.45rem 0;
+    text-decoration: none;
+}
+
+.acciones-barra {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.acciones-barra button {
+    padding: 0.45rem 0.75rem;
+    border: 1px solid #bcccdc;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.hero {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.hero h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin: 0;
+}
+
+.hero p {
+    max-width: 40rem;
+}
+
+.hero button {
+    justify-self: start;
+    padding: 0.65rem 1.1rem;
+    border: 0;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+}
+
+.seccion {
+    padding: 1.5rem 0;
+    border-top: 1px solid #d9e2ec;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filtro {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #bcccdc;
+    border-radius: 999px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.filtro.activo {
+    background: #2563eb;
+    color: #fff;
+    border-color: #2563eb;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.75rem;
+}
+
+.galeria figure {
+    margin: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #d9e2ec;
+}
+
+.galeria img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+}
+
+.oculto {
+    display: none;
+}
+
+form {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 28rem;
+}
+
+form input,
+form textarea {
+    padding: 0.55rem 0.65rem;
+    border: 1px solid #bcccdc;
+    border-radius: 8px;
+}
+
+form button {
+    justify-self: start;
+    padding: 0.6rem 1rem;
+    border: 0;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 10;
+}
+
+.modal.abierto {
+    display: flex;
+}
+
+.modal-caja {
+    background: #fff;
+    color: #1f2933;
+    width: min(100%, 26rem);
+    border-radius: 12px;
+    padding: 1.25rem;
+    position: relative;
+}
+
+.modal-caja .cerrar {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.6rem;
+    border: 0;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+body.tema-oscuro {
+    background: #0b1220;
+    color: #e5e7eb;
+}
+
+body.tema-oscuro .acciones-barra button,
+body.tema-oscuro .filtro {
+    background: #111827;
+    color: #e5e7eb;
+    border-color: #4b5563;
+}
+
+body.tema-oscuro .filtro.activo {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+body.tema-oscuro .seccion {
+    border-color: #374151;
+}
+
+body.tema-oscuro .modal-caja {
+    background: #111827;
+    color: #e5e7eb;
+}
+
+@media (min-width: 768px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .barra nav ul {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        gap: 1rem;
+    }
+
+    .barra nav a {
+        padding: 0;
+    }
+}

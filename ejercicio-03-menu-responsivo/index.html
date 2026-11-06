@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3: Menú hamburguesa responsivo</title>
+    <link rel="stylesheet" href="../assets/estilos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Ejercicio 3: Menú hamburguesa responsivo</h1>
+        <p class="consigna">Un menú que se muestra horizontal en escritorio y se despliega en móvil. El botón actualiza <code>aria-expanded</code> y se cierra al elegir un enlace.</p>
+    </header>
+    <main>
+        <section class="demo">
+            <nav class="navbar" aria-label="Menú principal">
+                <span class="marca">Mi Sitio</span>
+                <button class="menu-btn" type="button" aria-expanded="false" aria-controls="enlacesMenu">&#9776;</button>
+                <ul class="enlaces" id="enlacesMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

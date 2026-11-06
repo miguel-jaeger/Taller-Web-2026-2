@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8: Carrusel de imágenes</title>
+    <link rel="stylesheet" href="../assets/estilos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Ejercicio 8: Carrusel de imágenes</h1>
+        <p class="consigna">Un carrusel con tres diapositivas, botones anterior/siguiente, indicadores y avance automático cada 4 segundos.</p>
+    </header>
+    <main>
+        <section class="demo">
+            <div class="carrusel" aria-roledescription="carrusel">
+                <div class="pista" id="pista">
+                    <div class="slide"><img src="https://picsum.photos/900/400?random=301" alt="Paisaje 1"></div>
+                    <div class="slide"><img src="https://picsum.photos/900/400?random=302" alt="Paisaje 2"></div>
+                    <div class="slide"><img src="https://picsum.photos/900/400?random=303" alt="Paisaje 3"></div>
+                </div>
+            </div>
+            <div class="controles">
+                <button id="anterior" type="button" aria-label="Anterior">&larr; Anterior</button>
+                <div class="puntos" id="puntos"></div>
+                <button id="siguiente" type="button" aria-label="Siguiente">Siguiente &rarr;</button>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

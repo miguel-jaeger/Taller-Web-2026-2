@@ -1,0 +1,46 @@
+form {
+    display: grid;
+    gap: 0.9rem;
+    max-width: 30rem;
+}
+
+.campo {
+    display: grid;
+    gap: 0.3rem;
+}
+
+.campo input {
+    padding: 0.55rem 0.65rem;
+    border: 1px solid #bcccdc;
+    border-radius: 8px;
+}
+
+.campo input:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 1px;
+}
+
+.error {
+    color: #b91c1c;
+    font-size: 0.85rem;
+    min-height: 1.1em;
+}
+
+input.invalido {
+    border-color: #b91c1c;
+}
+
+#exito {
+    color: #047857;
+    font-weight: 600;
+}
+
+button[type="submit"] {
+    justify-self: start;
+    padding: 0.6rem 1rem;
+    border: 0;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+}

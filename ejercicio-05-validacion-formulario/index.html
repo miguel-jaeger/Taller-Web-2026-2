@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5: Validación de formulario en el cliente</title>
+    <link rel="stylesheet" href="../assets/estilos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Ejercicio 5: Validación de formulario en el cliente</h1>
+        <p class="consigna">El formulario valida nombre, correo y contraseña antes de enviarse. Muestra mensajes de error junto a cada campo y un mensaje de éxito.</p>
+    </header>
+    <main>
+        <section class="demo">
+            <form id="formulario" novalidate>
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" autocomplete="name">
+                    <small class="error" id="errorNombre"></small>
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" autocomplete="email">
+                    <small class="error" id="errorCorreo"></small>
+                </div>
+                <div class="campo">
+                    <label for="clave">Contraseña</label>
+                    <input type="password" id="clave" name="clave" autocomplete="new-password">
+                    <small class="error" id="errorClave"></small>
+                </div>
+                <button type="submit">Enviar</button>
+                <p id="exito" role="status"></p>
+            </form>
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7: Buscador en vivo</title>
+    <link rel="stylesheet" href="../assets/estilos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Ejercicio 7: Buscador en vivo</h1>
+        <p class="consigna">El campo de búsqueda filtra una tabla de estudiantes mientras se escribe, sin recargar la página.</p>
+    </header>
+    <main>
+        <section class="demo">
+            <input type="search" id="busqueda" placeholder="Buscar por nombre o carrera..." aria-label="Buscar estudiantes">
+            <table id="tablaEstudiantes">
+                <thead>
+                    <tr><th>Nombre</th><th>Carrera</th><th>Ciclo</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Ana Torres</td><td>Sistemas</td><td>III</td></tr>
+                    <tr><td>Luis Ramos</td><td>Industrial</td><td>V</td></tr>
+                    <tr><td>Carla Díaz</td><td>Sistemas</td><td>VII</td></tr>
+                    <tr><td>Diego Flores</td><td>Civil</td><td>II</td></tr>
+                    <tr><td>Elena Vargas</td><td>Industrial</td><td>IX</td></tr>
+                </tbody>
+            </table>
+            <p id="sinResultados">No se encontraron coincidencias.</p>
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
