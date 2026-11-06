@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10: Cálculo del IMC con alerta en mayúsculas</title>
+    <link rel="stylesheet" href="../assets/estilos.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Ejercicio 10: Cálculo del IMC con alerta en mayúsculas</h1>
+        <p class="consigna">Se almacenan <code>nombre</code> = «miguel», <code>peso</code> = 75 y <code>altura</code> = 1.75; se calcula el IMC y se muestra una alerta con el nombre en mayúsculas.</p>
+    </header>
+    <main>
+        <section class="demo">
+            <script>
+                let nombre = "miguel";
+                let peso = 75;
+                let altura = 1.75;
+                let imc = peso / (altura * altura);
+                let nombreMayus = nombre.toUpperCase();
+                alert("USUARIO: " + nombreMayus + "\nIMC CALCULADO: " + imc.toFixed(2));
+            </script>
+
+        </section>
+
+    </main>
+</body>
+</html>
