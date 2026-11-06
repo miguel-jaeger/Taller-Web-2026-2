@@ -1,0 +1,6 @@
+/* Hoja de estilos externa cargada desde el <head> del documento. */
+p {
+    color: #0f766e;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
