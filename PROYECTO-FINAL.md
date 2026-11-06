@@ -1,9 +1,9 @@
 # Proyecto final · Estudio Verde
 
 Scaffold funcional para el proyecto final del Taller de Programación Web.
-Está basado en los requisitos de la presentación **S17_s1 - Presentación del proyecto final**
-(ver `docs/S17-presentacion-proyecto-final.pdf`). El archivo `faltan/17.docx` estaba vacío,
-por eso esta rama contiene una plantilla en lugar de 10 ejercicios.
+Está basado en los requisitos de la presentación **S17_s1 - Presentación del proyecto final**.
+El archivo `17.docx` de la carpeta de prácticas estaba vacío, por eso esta rama contiene
+una plantilla en lugar de 10 ejercicios.
 
 ## Estructura
 
@@ -14,7 +14,6 @@ contacto.html           Página de contacto con formulario validado
 css/estilos.css         Estilos, variables y diseño responsivo
 js/script.js            Menú, tema, filtros, modal, validación y toasts
 img/logo.svg            Logotipo de ejemplo
-docs/                   Presentación de referencia
 ```
 
 ## Cómo ejecutar
@@ -60,4 +59,4 @@ Luego visita `http://localhost:8000`.
 - ZIP/RAR con el código fuente completo.
 - Exposición en vivo de 5 a 7 minutos.
 
-Revisa la rúbrica en `docs/S17-presentacion-proyecto-final.pdf` antes de entregar.
+Revisa la rúbrica de la presentación S17 antes de entregar.
