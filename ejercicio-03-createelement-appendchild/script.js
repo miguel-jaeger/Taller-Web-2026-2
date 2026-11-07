@@ -1,6 +1,6 @@
 // Ejercicio 3: Creación dinámica de elementos
 const nuevoDiv = document.createElement("div");
-nuevoDiv.textContent = "Hola mundo";
+nuevoDiv.textContent = "Hola mundooooooooo!";
 nuevoDiv.style.padding = "10px";
 nuevoDiv.style.marginTop = "1rem";
 nuevoDiv.style.border = "1px solid #2563eb";
